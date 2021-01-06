@@ -1,0 +1,220 @@
+:root {
+    --violeta: hsl(263, 55%, 52%);
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --LightGray: hsl(0, 0%, 81%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    background: #e2eafc;
+    font-size: 13px;
+    display: flex;
+    justify-content: center;  
+}
+
+.grid-container {
+    margin: 0 auto;
+    padding: 15px 0;
+    display: grid; 
+    grid-template-rows: 70vmin 40vmin 40vmin 60vmin 70vmin;
+    grid-template-columns: 280px;
+    grid-gap: 20px;
+}
+
+.grid-item {
+    border-radius: 5px;
+    color: #000;
+    padding: 10px;
+    background: #ffffff;
+    -webkit-box-shadow: 2px 2px 7px -2px rgba(0,0,0,0.72);
+    -moz-box-shadow: 2px 2px 7px -2px rgba(0,0,0,0.72);
+    box-shadow: 2px 2px 7px -2px rgba(0,0,0,0.72);
+}
+
+.grid-item:first-child {
+    background: var(--violeta);
+}
+
+.grid-item:nth-child(2) {
+    background: var(--VeryDarkGrayishBlue);
+} 
+
+.grid-item:nth-child(3){
+    order: 1;
+}
+
+.grid-item:nth-child(4), .grid-item:nth-child(3) {
+    background: #f4f3ee;
+}
+
+.grid-item:nth-child(5) {
+    background: var(--VeryDarkBlackishBlue);
+}
+
+.texto {
+    font-size: 13px;
+    padding: 5px;
+}
+
+.grid-item:first-child,
+.grid-item:nth-child(2),
+.grid-item:nth-child(5) {
+    color:#ffffff;
+}
+
+.usuario {
+    display: flex;
+}
+
+.usuario__nombre {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 3.4vmin;
+    margin-top: 3px;
+}
+
+.usuario__imagen {
+    width: 8vmin;
+    height: 8vmin;
+    border: 1px solid #f2f2f2;
+    border-radius: 30px;
+}
+
+.usuario__imagen img {
+    max-width: 100%;
+    border-radius: 30px;   
+}
+
+.transparente {
+    font-size: 2.4vmin;
+    color: var(--LightGray);
+}
+
+.texto__titular {
+    font-weight: 600;
+    font-size: 3.4vmin;
+    color: #fff;
+}
+
+.dark-title {
+    color: #000;
+}
+
+.comillas {
+    position: relative;
+    top: -10px;
+    left: 60%;
+    width: max-content;
+}
+
+.usuario-comillas {
+     position: relative;
+     z-index: 2;
+     bottom: 100px; 
+ }
+
+
+@media screen and (min-width:768px){ 
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    
+    .grid-container {
+        padding: 0;
+        grid-template-columns: repeat(4,180px);
+        grid-template-rows: repeat(2,200px);
+    }
+        
+        
+    .grid-item:first-child {
+        grid-row: 1 / 2;
+        grid-column: 1 / 3;
+            
+    }
+        
+    .grid-item:nth-child(2) {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+    } 
+        
+    .grid-item:nth-child(3) {
+        grid-column: 4 / 5;
+        grid-row: 1 / 3;
+        order: 0;
+    }
+         
+    .grid-item:nth-child(5) {
+        grid-column: 2 / 4;
+    }
+        
+    .texto {
+        font-size: 13px;
+        padding: 5px;
+    }
+        
+        .usuario {
+            display: flex;
+        }
+        
+        .usuario__nombre {
+            display: flex;
+            flex-direction: column;
+            margin-left: 10px;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+        
+        .usuario__imagen {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #f2f2f2;
+            border-radius: 30px;
+        }
+        
+        .usuario__imagen img {
+            max-width: 100%;
+            border-radius: 30px;   
+        }
+        
+        .transparente {
+            font-size: 10px;
+            color: var(--LightGray);
+        }
+        
+        .texto__titular {
+            font-weight: 600;
+            font-size: 14px;
+            color: #fff;
+        }
+        
+        .dark-title {
+            color: #000;
+        }
+        
+        .comillas {
+            position: relative;
+            top: -10px;
+            left: 230px;
+            
+        }
+        
+        .usuario-comillas {
+             position: relative;
+             z-index: 2;
+             bottom: 100px;
+         }
+}
+
+
+ 
